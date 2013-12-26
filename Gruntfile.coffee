@@ -21,11 +21,9 @@ module.exports = (grunt) ->
 				files: ['target/**/*-test.js']
 				require: ['should']
 			test: options: reporter: 'spec'
-			coverage: options: coveralls: serviceName: 'travis-ci'
 		shell: sbt: command: 'sbt optimizeJS'
 
 	grunt.loadNpmTasks('grunt-contrib-coffee')
-	grunt.loadNpmTasks('grunt-contrib-copy')
 	grunt.loadNpmTasks('grunt-mocha-cov')
 	grunt.loadNpmTasks('grunt-shell')
 

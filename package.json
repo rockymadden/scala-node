@@ -6,7 +6,6 @@
 		"grunt": "0.4.x",
 		"grunt-cli": "0.1.x",
 		"grunt-contrib-coffee": "0.7.x",
-		"grunt-contrib-copy": "0.4.x",
 		"grunt-mocha-cov": "0.1.x",
 		"grunt-shell": "0.6.x",
 		"mocha": "1.15.x",
@@ -19,7 +18,6 @@
 	"name": "scala.js-node-example",
 	"repository": {"type": "git", "url": "git://github.com/rockymadden/scala.js-node-example.git"},
 	"scripts": {
-		"blanket": {"pattern": ["target/lib"]},
 		"prepublish": "grunt"
 	},
 	"version": "0.0.0"
