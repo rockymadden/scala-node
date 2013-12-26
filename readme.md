@@ -1,6 +1,6 @@
-#scala.js-node-example [![Build Status](https://travis-ci.org/rockymadden/scala.js-node-example.png?branch=master)](http://travis-ci.org/rockymadden/scala.js-node-example)
+#scala-node-example [![Build Status](https://travis-ci.org/rockymadden/scala.js-node-example.png?branch=master)](http://travis-ci.org/rockymadden/scala.js-node-example)
 	
-Goofing around to see if scala.js could be leveraged to make a node module. It can.
+Proof of concept to see if [scala.js](https://github.com/scala-js/scala-js) could be leveraged to make a [node](https://github.com/joyent/node) module. It can.
 
 ## How to
 

@@ -21,7 +21,7 @@ module.exports = (grunt) ->
 				files: ['target/**/*-test.js']
 				require: ['should']
 			test: options: reporter: 'spec'
-		shell: sbt: command: 'sbt optimizeJS'
+		shell: sbt: command: 'sbt packageJS'
 
 	grunt.loadNpmTasks('grunt-contrib-coffee')
 	grunt.loadNpmTasks('grunt-mocha-cov')
