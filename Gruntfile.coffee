@@ -38,6 +38,6 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks('grunt-mocha-cov')
 	grunt.loadNpmTasks('grunt-shell')
 
-	grunt.registerTask('default', ['coffee', 'shell:sbtPackageJS'])
+	grunt.registerTask('default', ['shell:sbtPackageJS', 'coffee'])
 	grunt.registerTask('test', ['default', 'shell:sbtTest', 'mochacov:test'])
 	grunt.registerTask('travis', ['test'])

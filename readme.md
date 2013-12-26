@@ -2,20 +2,24 @@
 	
 Proof of concept to see if [scala.js](https://github.com/scala-js/scala-js) could be leveraged to make a [node](https://github.com/joyent/node) module. It can.
 
-## How to
+## How-to
 
-__Build:__
+__Install node dependencies:__
 ```
 npm install
+```
+
+__Build:__ Runs ```sbt packageJS``` and then performs all grunt default tasks (e.g. compile CoffeeScript).
+```
 grunt
 ```
 
-__Test:__
+__Test:__ Runs all build items above, then runs ```sbt test```, and then runs Mocha based tests.
 ```
 grunt test
 ```
 
-__Publish:__
+__Publish to NPM:__ Runs build items above prior.
 ```
 npm publish
 ```
