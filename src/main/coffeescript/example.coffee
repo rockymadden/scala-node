@@ -1,5 +1,5 @@
-vm = require('vm')
 fs = require('fs')
+vm = require('vm')
 
 scalajs = {}
 sandbox = (path, context) ->

@@ -2,6 +2,24 @@
 	
 Goofing around to see if scala.js could be leveraged to make a node module. It can.
 
+## How to
+
+__Build:__
+```
+npm install
+grunt
+```
+
+__Test:__
+```
+grunt test
+```
+
+__Publish:__
+```
+npm publish
+```
+
 ## License
 ```
 The MIT License (MIT)
