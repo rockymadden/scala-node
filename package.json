@@ -1,0 +1,26 @@
+{
+	"author": "Rocky Madden (http://rockymadden.com/)",
+	"description": "Goofing around to see if scala.js could be leveraged to make a node module. It can.",
+	"devDependencies": {
+		"coffee-script": "1.6.x",
+		"grunt": "0.4.x",
+		"grunt-cli": "0.1.x",
+		"grunt-contrib-coffee": "0.7.x",
+		"grunt-contrib-copy": "0.4.x",
+		"grunt-mocha-cov": "0.1.x",
+		"grunt-shell": "0.6.x",
+		"mocha": "1.15.x",
+		"should": "2.1.x"
+	},
+	"engines": {"node": ">=0.10.0"},
+	"homepage": "http://rockymadden.com/scala.js-node-example/",
+	"keywords": ["scala", "scala.js", "example"],
+	"main": "target/example.js",
+	"name": "scala.js-node-example",
+	"repository": {"type": "git", "url": "git://github.com/rockymadden/scala.js-node-example.git"},
+	"scripts": {
+		"blanket": {"pattern": ["target/lib"]},
+		"prepublish": "grunt"
+	},
+	"version": "0.0.0"
+}
