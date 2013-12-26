@@ -21,12 +21,23 @@ module.exports = (grunt) ->
 				files: ['target/**/*-test.js']
 				require: ['should']
 			test: options: reporter: 'spec'
-		shell: sbt: command: 'sbt packageJS'
+		shell:
+			sbtOptimizeJS:
+				command: 'sbt optimizeJS'
+				options: stdout: true
+			sbtPackageJS:
+				command: 'sbt packageJS'
+				options: stdout: true
+			sbtTest:
+				command: 'sbt test'
+				options:
+					failOnError: true
+					stdout: true
 
 	grunt.loadNpmTasks('grunt-contrib-coffee')
 	grunt.loadNpmTasks('grunt-mocha-cov')
 	grunt.loadNpmTasks('grunt-shell')
 
-	grunt.registerTask('default', ['coffee', 'shell:sbt'])
-	grunt.registerTask('test', ['default', 'mochacov:test'])
+	grunt.registerTask('default', ['coffee', 'shell:sbtPackageJS'])
+	grunt.registerTask('test', ['default', 'shell:sbtTest', 'mochacov:test'])
 	grunt.registerTask('travis', ['test'])
