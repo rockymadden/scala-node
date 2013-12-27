@@ -6,6 +6,7 @@
 		"grunt": "0.4.x",
 		"grunt-cli": "0.1.x",
 		"grunt-contrib-coffee": "0.7.x",
+		"grunt-contrib-copy": "0.5.x",
 		"grunt-mocha-cov": "0.1.x",
 		"grunt-shell": "0.6.x",
 		"mocha": "1.15.x",
