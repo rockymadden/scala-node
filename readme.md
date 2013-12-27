@@ -3,8 +3,8 @@
 Proof of concept to see if [scala.js](https://github.com/scala-js/scala-js) could be leveraged to make a [node](https://github.com/joyent/node) module. It can.
 
 __With this setup:__
-* You can use Scala test frameworks (e.g. specs2) to test your Scala codebase, prior to JavaScript compilation.
-* You can use JavaScript test frameworks (e.g. mocha) to test your compiled JavaScript. This includes your scala.js compiled code.
+* You can use Scala test frameworks (e.g. specs2) to test your Scala codebase prior to JavaScript compilation.
+* You can use JavaScript test frameworks (e.g. mocha) to test your JavaScript codebase. This includes your scala.js compiled code.
 
 ## How-to
 
@@ -18,7 +18,7 @@ __Build:__ Runs ```sbt main/packageJS``` and then performs all grunt default tas
 grunt
 ```
 
-__Test:__ Runs all build items above, then runs ```sbt test/test```, and then runs Mocha based tests.
+__Test:__ Runs all build items above, then runs ```sbt test/test```, and finally runs Mocha based tests.
 ```
 grunt test
 ```
