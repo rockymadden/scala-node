@@ -7,7 +7,7 @@ object CoreBuild extends Build {
   lazy val test: Project = Project("test", file("test"),
     settings = Defaults.defaultSettings ++ Seq(
       name := "scala-node-test",
-      version := "0.1.0",
+      version := "0.2.0",
       scalaVersion := "2.10.2",
       resolvers ++= Seq(
         DefaultMavenRepository,
@@ -20,7 +20,7 @@ object CoreBuild extends Build {
   lazy val main: Project = Project("main", file("main"), delegates = root :: Nil,
     settings = Defaults.defaultSettings ++ Seq(
       name := "scala-node-main",
-      version := "0.1.0",
+      version := "0.2.0",
       scalaVersion := "2.10.2",
       resolvers ++= Seq(
         DefaultMavenRepository,
