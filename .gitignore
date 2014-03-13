@@ -14,6 +14,12 @@
 # OS ignores.
 .DS_Store
 
+# Editor ignores.
+*.idea
+*.iml
+*.ipr
+*.iws
+
 # Build ignores.
 target
 
