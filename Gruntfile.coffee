@@ -17,9 +17,12 @@ module.exports = (grunt) ->
 				ext: '.js'
 			}]
 		copy:
-			main: files: [ src: ['main/target/scala-2.10/**'], dest: 'target/' ]
-			test: files: [ src: ['test/target/scala-2.10/**'], dest: 'target/' ]
+			main: files: [src: ['main/target/scala-2.10/**'], dest: 'target/']
+			test: files: [src: ['test/target/scala-2.10/**'], dest: 'target/']
 		mochacov:
+			coverage: options:
+				reporter: 'mocha-term-cov-reporter'
+				coverage: true
 			options:
 				files: ['target/**/*-test.js']
 				require: ['should']
@@ -39,6 +42,6 @@ module.exports = (grunt) ->
 	grunt.loadNpmTasks('grunt-mocha-cov')
 	grunt.loadNpmTasks('grunt-shell')
 
+	grunt.registerTask('coverage', ['default', 'coffee:test', 'copy:test', 'mochacov:coverage'])
 	grunt.registerTask('default', ['shell:sbtMain', 'coffee:main', 'copy:main'])
 	grunt.registerTask('test', ['default', 'coffee:test', 'copy:test', 'shell:sbtTest', 'mochacov:test'])
-	grunt.registerTask('travis', ['test'])
