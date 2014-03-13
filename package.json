@@ -1,6 +1,6 @@
 {
 	"author": "Rocky Madden (http://rockymadden.com/)",
-	"description": "Proof of concept to see if scala.js could be leveraged to make a node module. It can.",
+	"description": "Proof of concept to determine if scala.js could be leveraged to make a node.js module. It can.",
 	"devDependencies": {
 		"coffee-script": "1.6.x",
 		"grunt": "0.4.x",
@@ -13,11 +13,11 @@
 		"should": "2.1.x"
 	},
 	"engines": {"node": ">=0.10.0"},
-	"homepage": "http://rockymadden.com/scala-node-example/",
-	"keywords": ["scala", "scala.js", "example"],
+	"homepage": "http://rockymadden.com/scala-node/",
+	"keywords": ["scala", "scala.js"],
 	"main": "target/example.js",
-	"name": "scala-node-example",
-	"repository": {"type": "git", "url": "git://github.com/rockymadden/scala-node-example.git"},
+	"name": "scala-node",
+	"repository": {"type": "git", "url": "git://github.com/rockymadden/scala-node.git"},
 	"scripts": {
 		"prepublish": "grunt"
 	},

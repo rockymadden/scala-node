@@ -1,54 +1,50 @@
-#scala-node-example [![Build Status](https://travis-ci.org/rockymadden/scala-node-example.png?branch=master)](http://travis-ci.org/rockymadden/scala-node-example)
-	
-Proof of concept to see if [scala.js](https://github.com/scala-js/scala-js) could be leveraged to make a [node](https://github.com/joyent/node) module. It can.
+Node Boilerplate Version 2
+==========================
+*Requires Node v0.6.6 (or newer)*
+node-boilerplate takes html-boilerplate, express, connect, jade and Socket.IO and organizes them into a ready to use website project. It's a fast way to get working on your Node website without having to worry about the setup. It takes care of all the boring parts, like setting up your views, 404 page, 500 page, getting the modules organized, etc... 
 
-__With this setup:__
-* You can use Scala test frameworks (e.g. specs2) to test your Scala codebase prior to JavaScript compilation.
-* You can use JavaScript test frameworks (e.g. mocha) to test your JavaScript codebase. This includes your scala.js compiled code.
+Node Boilerplate has 4 goals:
 
-## How-to
+1. To end the repetition involved with starting a new Node website project
+2. To never install anything outside of the project directory (For easier production deployment)
+3. To make it easy to install additional modules within the project directory
+4. To enable easy upgrade or freezing of project dependencies  
+(These goals are much easier to meet now that node includes the node_modules convention)
 
-__Install node dependencies:__
-```
-npm install
-```
+To start a project:
+		
+		git clone git://github.com/robrighter/node-boilerplate.git mynewproject
+		cd mynewproject
+		./initproject.sh
+This will copy down all of the boilerplate files, organize them appropriately and init a fresh new git repository within which you can build your next big thing.
 
-__Build:__ Runs ```sbt main/packageJS``` and then performs all grunt default tasks (e.g. compile CoffeeScript).
-```
-grunt
-```
 
-__Test:__ Runs all build items above, then runs ```sbt test/test```, and finally runs Mocha based tests.
-```
-grunt test
-```
+To run the boilerplate template app:
 
-__Publish to NPM:__ Runs build items above prior.
-```
-npm publish
-```
+		node server.js
 
-## License
-```
-The MIT License (MIT)
+Go to http://0.0.0.0:8081 and click on the send message link to see socket.io in action.
 
-Copyright (c) 2013 Rocky Madden (http://rockymadden.com/)
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+Additional Features:
 
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
+1. Creates a package.json file consistent with associated best practices (http://blog.nodejitsu.com/package-dependencies-done-right)
+2. Adds .gitignore for the node_modules directory
+3. Includes 404 page and associated route
+4. Includes 500 page
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-THE SOFTWARE.
-```
+To add additional modules:
+
+Update the package.json file to include new module dependencies and run 'npm install'.
+
+**If you have a different set of default modules that you like to use, the structure is setup such that you can fork the project and replace the module dependencies outlined in the ./templates/apps/package.json file to best fit your needs and the initproject.sh script will initialize projects with your new set of modules.**
+
+Deployment
+===============
+
+node-boilerplate is setup to be easily deployed on a Joyent Node SmartMachine. This means that:
+
+1. The version of Node is defined in config.json and in package.json
+2. The main script to run is server.js
+3. The web server port is pulled from process.env.PORT 
+
