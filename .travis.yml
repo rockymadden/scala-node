@@ -1,5 +1,13 @@
-language: node_js
-node_js:
-  - "0.10"
+language: scala
+scala:
+  - "2.10.3"
+install:
+  - "rm -rf ~/.nvm"
+  - "curl https://raw.github.com/creationix/nvm/master/install.sh | sh"
+  - "source ~/.nvm/nvm.sh"
+  - "nvm install 0.10"
+  - "nvm use 0.10"
 script:
+  - "npm install grunt-cli"
+  - "npm install"
   - "grunt test"
