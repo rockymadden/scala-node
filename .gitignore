@@ -1,27 +1,2 @@
-# Core ignores.
-*.diff
-*.err
-*.orig
-*.log
-*.rej
-*.swo
-*.swp
-*.vi
-*~
-*#
-.git/
-
-# OS ignores.
-.DS_Store
-
-# Editor ignores.
-*.idea
-*.iml
-*.ipr
-*.iws
-
-# Build ignores.
-target
-
-# Project ignores.
 node_modules
+target
