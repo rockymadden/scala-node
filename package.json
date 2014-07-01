@@ -19,6 +19,6 @@
 	"main": "target/example.js",
 	"name": "scala-node",
 	"repository": {"type": "git", "url": "git://github.com/rockymadden/scala-node.git"},
-	"scripts": {"prepublish": "grunt"},
+	"scripts": {"prepublish": "grunt make"},
 	"version": "0.2.0"
 }
