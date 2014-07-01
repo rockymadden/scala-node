@@ -6,37 +6,14 @@ __With this structure:__
 * You can use Scala test frameworks (e.g. specs2) to test your Scala codebase prior to JavaScript compilation.
 * You can use JavaScript test frameworks (e.g. mocha) to test your JavaScript codebase. This includes your scala.js compiled code.
 
-## How-to
+## Usage
 
-__Install node.js dependencies:__
+``` bash
+$ npm install # Dependencies
+$ grunt make # Build
+$ grunt test # Test
+$ npm publish # Publish
 ```
-npm install
-```
----
-
-__Build:__
-```
-grunt make
-```
-Runs ```sbt main/fullOptJS```, then performs all grunt default tasks (e.g. compile CoffeeScript).
-
----
-
-__Test:__
-```
-grunt test
-```
-Runs all build items above, runs ```sbt test/test```, and finally runs Mocha based tests.
-
----
-
-__Publish to NPM:__
-```
-npm publish
-```
-Runs build items above prior.
-
----
 
 ## License
 ```
