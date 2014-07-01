@@ -1,7 +1,10 @@
 package example
 
-object Example {
-	def main(args: Array[String]): Unit = {}
+import scala.scalajs.js
+import js.annotation.JSExport
 
-	def helloWorld(): String = "Hello World!"
+@JSExport
+object Example {
+	@JSExport
+	def helloWorld() = "Hello World!"
 }

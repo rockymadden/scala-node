@@ -1,6 +1,6 @@
 language: scala
 scala:
-  - "2.10.3"
+  - "2.11.1"
 install:
   - "rm -rf ~/.nvm"
   - "curl https://raw.github.com/creationix/nvm/master/install.sh | sh"

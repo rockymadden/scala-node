@@ -4,7 +4,7 @@ should = require('should')
 describe('example', ->
 	describe('helloWorld()', ->
 		it('should return "Hello World!"', ->
-			example.helloWorld__().should.be.equal('Hello World!')
+			example.Example().helloWorld().should.be.equal('Hello World!')
 		)
 	)
 )

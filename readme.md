@@ -1,6 +1,6 @@
 #scala-node [![Build Status](https://travis-ci.org/rockymadden/scala-node.png?branch=master)](http://travis-ci.org/rockymadden/scala-node)
 
-Proof of concept to determine if [scala.js](https://github.com/scala-js/scala-js) could be leveraged to make a [node.js](https://github.com/joyent/node) module. It can.
+Proof of concept to determine if [Scala.js](https://github.com/scala-js/scala-js) could be leveraged to make a [Node.js](https://github.com/joyent/node) module. It can.
 
 __With this structure:__
 * You can use Scala test frameworks (e.g. specs2) to test your Scala codebase prior to JavaScript compilation.
