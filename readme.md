@@ -2,9 +2,9 @@
 
 Proof of concept to determine if [Scala.js](https://github.com/scala-js/scala-js) could be leveraged to make a [Node.js](https://github.com/joyent/node) module. It can.
 
-__With this structure:__
-* You can use Scala test frameworks (e.g. specs2) to test your Scala codebase prior to JavaScript compilation.
-* You can use JavaScript test frameworks (e.g. mocha) to test your JavaScript codebase. This includes your scala.js compiled code.
+__With this structure you can:__
+* Use Scala test frameworks (e.g. specs2) to test your Scala codebase prior to JavaScript compilation.
+* Use JavaScript test frameworks (e.g. mocha) to test your JavaScript codebase. This includes your Scala.js compiled code.
 
 ## Usage
 
