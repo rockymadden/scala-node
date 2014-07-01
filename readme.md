@@ -16,9 +16,9 @@ npm install
 
 __Build:__
 ```
-grunt
+grunt make
 ```
-Runs ```sbt main/packageJS```, then performs all grunt default tasks (e.g. compile CoffeeScript).
+Runs ```sbt main/fullOptJS```, then performs all grunt default tasks (e.g. compile CoffeeScript).
 
 ---
 
